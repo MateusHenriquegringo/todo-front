@@ -10,12 +10,14 @@
     padding: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+
 }
 
 .task {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
+    padding: 20px;
 }
 
 .task h2 {
@@ -35,4 +37,10 @@
     grid-column: span 2;
     font-weight: bold;
     color: #888;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
 }

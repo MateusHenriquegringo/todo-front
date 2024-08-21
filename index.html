@@ -13,11 +13,24 @@
 <main>
     <header>
         <h1> Task Manager </h1>
-        <button id="create-task">Create Task</button>
+        <button id="open-modal">Create Task</button>
     </header>
     <div class="tasks">
         <ul>
-
+            <li>
+                <div class="task">
+                    <h2>Nome: <span>${name}</span></h2>
+                    <p>Descricao: <span>${description}</span></p>
+                    <p>Prioridade: <span>${priority}</span></p>
+                    <p>Status: <span>${status}</span></p>
+                    <p>Categoria: <span>${category}</span></p>
+                    <p>Data Final: <span>${finalDate}</span></p>
+                </div>
+                <div class="buttons">
+                    <button class="exclude-task">excluir</button>
+                    <button class="edit-task">editar</button>
+                </div>
+            </li>
         </ul>
     </div>
 
@@ -57,8 +70,10 @@
     </div>
 </main>
 
+<script src="./scripts/deleteTask.js"></script>
+<script src="./scripts/editTask.js"></script>
+<script src="./scripts/createTask.js"></script>
+<script src="./scripts/modal.js"></script>
 
-<script src="./taskComponent.js"></script>
-<script src="./modal.js"></script>
 </body>
 </html>
