@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,72 +9,59 @@
     <link rel="stylesheet" href="./styles/task.css">
     <link rel="stylesheet" href="./styles/modal.css">
 </head>
+
 <body>
 
-<main>
-    <header>
-        <h1> Task Manager </h1>
-        <button id="open-modal">Create Task</button>
-    </header>
-    <div class="tasks">
-        <ul>
-            <li>
-                <div class="task">
-                    <h2>Nome: <span>${name}</span></h2>
-                    <p>Descricao: <span>${description}</span></p>
-                    <p>Prioridade: <span>${priority}</span></p>
-                    <p>Status: <span>${status}</span></p>
-                    <p>Categoria: <span>${category}</span></p>
-                    <p>Data Final: <span>${finalDate}</span></p>
-                </div>
-                <div class="buttons">
-                    <button class="exclude-task">excluir</button>
-                    <button class="edit-task">editar</button>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-
-    <div id="task-modal" class="modal">
-        <div class="modal-content">
-
-            <span class="close-button">&times;</span>
-            <h2>Add Task</h2>
-
-            <form id="task-form">
-                <label for="task-name">Task Name:</label>
-                <input type="text" id="task-name" name="task-name" required>
-
-                <label for="task-date">Final Date:</label>
-                <input type="date" id="task-date" name="task-date" required>
-
-                <label for="task-description">Description:</label>
-                <input type="text" id="task-description" name="task-description" required>
-
-                <label for="task-category">Category:</label>
-                <input type="text" id="task-category" name="task-category" required>
-
-                <label for="task-status">Status:</label>
-                <select name="task-status" id="task-status">
-                    <option value="done">Done</option>
-                    <option value="doing">Doing</option>
-                    <option value="todo">Todo</option>
-                </select>
-
-                <label for="task-priority">Priority:</label>
-                <input type="range" id="task-priority" name="task-priority" min="1" max="5" step="1" required>
-
-                <button type="submit" id="create-task-button">Add Task</button>
-            </form>
+    <main>
+        <header>
+            <h1> Task Manager </h1>
+            <button id="open-modal">Create Task</button>
+        </header>
+        <div class="tasks">
+            <ul>
+            </ul>
         </div>
-    </div>
-</main>
 
-<script src="./scripts/deleteTask.js"></script>
-<script src="./scripts/editTask.js"></script>
-<script src="./scripts/createTask.js"></script>
-<script src="./scripts/modal.js"></script>
+
+        <div id="task-modal" class="modal">
+            <div class="modal-content">
+
+                <span class="close-button">&times;</span>
+                <h2>Add Task</h2>
+
+                <form id="task-form">
+                    <label for="task-name">Task Name:</label>
+                    <input type="text" id="task-name" name="task-name" required>
+
+                    <label for="task-date">Final Date:</label>
+                    <input type="date" id="task-date" name="task-date" required>
+
+                    <label for="task-description">Description:</label>
+                    <input type="text" id="task-description" name="task-description" required>
+
+                    <label for="task-category">Category:</label>
+                    <input type="text" id="task-category" name="task-category" required>
+
+                    <label for="task-status">Status:</label>
+                    <select name="task-status" id="task-status">
+                        <option value="done">Done</option>
+                        <option value="doing">Doing</option>
+                        <option value="todo">Todo</option>
+                    </select>
+
+                    <label for="task-priority">Priority:</label>
+                    <input type="range" id="task-priority" name="task-priority" min="1" max="5" step="1" required>
+
+                    <button type="submit" id="create-task-button">Add Task</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="./scripts/deleteAndEditTask.js"></script>
+    <script type="module" src="./scripts/createTask.js"></script>
+    <script type="module" src="./scripts/modal.js"></script>
 
 </body>
+
 </html>
